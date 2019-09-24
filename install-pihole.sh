@@ -14,7 +14,7 @@ case "$response" in
         ;;
 esac
 
-read -r -p "Port for the Webserver: " port
+read -r -p "Port for the Webserver (default: 80): " port
 
 read -s -p "Enter new password for Pi-hole: " password
 echo ""
