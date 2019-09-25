@@ -49,7 +49,7 @@ containerid=$(sudo docker ps | awk '{print $1}' | tail -1)
 echo "ContainerID: $containerid"
 
 echo "Setting password..."
-sudo docker exec -it $containerid sh -c "pihole -a -p $password"
+sudo docker exec -it $containerid sh -c "pihole -a -p '$password'"
 
 echo "Enabling auto-update (watchtower), every day at 4:30am"
 docker pull v2tec/watchtower:latest
